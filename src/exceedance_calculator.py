@@ -62,7 +62,7 @@ def get_warning_level(series: pd.Series, value: float) -> int:
     return level
 
 def multiple_values_to_level(discharges: pd.Series, exceedance_values: pd.DataFrame,
-                             warning_levels_mapping: pd.Series) -> Dict:
+                             warning_levels_mapping: pd.Series = warning_levels_mapping) -> Dict:
     '''
     Calculate warning levels for a series of discharge values at stations
     :param discharges: A series with dischatges for values and station_ids for index
